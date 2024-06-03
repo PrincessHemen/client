@@ -92,19 +92,47 @@
     display: flex;
     justify-content: space-between;
     font-size: 0.8em;
-    color: #888;
 }
 
-.message.sent .message-info {
-    justify-content: flex-end;
+.message-author {
+    margin-right: 10px; /* Add space between author and time */
 }
 
-.message.received .message-info {
-    justify-content: flex-start;
+.message-time {
+    color: #888; /* Default color for time */
 }
 
-.message.dark-mode .message-info {
-    color: #ccc;
+.message.sent .message-author {
+    color: #d4e3f1; /* Light color for author in sent message */
+}
+
+.message.received .message-author {
+    color: rgb(38, 69, 105); /* Darker color for author in received message */
+}
+
+.message.sent .message-time {
+    color: #d4e3f1; /* Light color for time in sent message */
+}
+
+.message.received .message-time {
+    color: rgb(31, 82, 139); /* Darker color for time in received message */
+}
+
+/* Dark mode specific styling */
+.chat-box.dark-mode .message.sent .message-author {
+    color: #aec4e6; /* Slightly lighter color for author in sent message in dark mode */
+}
+
+.chat-box.dark-mode .message.received .message-author {
+    color: rgb(146, 170, 192); /* Lighter color for author in received message in dark mode */
+}
+
+.chat-box.dark-mode .message.sent .message-time {
+    color: #aec4e6; /* Slightly lighter color for time in sent message in dark mode */
+}
+
+.chat-box.dark-mode .message.received .message-time {
+    color: #dae5f0; /* Lighter color for time in received message in dark mode */
 }
 
 /* Chat footer styling */
