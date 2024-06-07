@@ -3,7 +3,9 @@ import Chat from './Components/Chat/Chat';
 import io from 'socket.io-client';
 import React, { useState, useEffect } from 'react';
 
-const socket = io.connect("http://localhost:3000");
+// Determine the socket URL based on the hostname
+const socketURL = window.location.hostname === "localhost" ? "http://localhost:3000" : "https://server-33sx.onrender.com";
+const socket = io.connect(socketURL);
 
 function App() {
     const [username, setUsername] = useState("");
